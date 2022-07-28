@@ -1,0 +1,9 @@
+form.form-search input[type="search"] {
+    border-color: orange;
+    height: 50px;
+    width: 185px;
+}
+
+form.form-search input[type="search"]::placeholder {
+    color: #000;
+}

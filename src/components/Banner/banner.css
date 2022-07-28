@@ -1,0 +1,68 @@
+.site-banner {
+    display: flex;
+    flex-flow: row wrap;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.site-banner .pattern-kitchen {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%) rotate(75deg) scale(2);
+    z-index: -1;
+    opacity: .1;
+}
+
+.site-banner .content-banner {
+    padding: 32px;
+    align-self: center;
+}
+
+.site-banner .content-banner,
+.site-banner .figure-banner {
+    flex: 1;
+}
+
+.site-banner .figure-banner {
+    display: flex;
+    height: calc(100vh - 84px);
+}
+
+.content-banner h1 {
+    width: 100%;
+    max-width: 520px;
+}
+
+.content-banner p {
+    width: 100%;
+    max-width: 580px;
+    font-size: 18px;
+}
+
+.button-group {
+    margin-top: 24px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.button-group > a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    padding: 12px 32px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+.button-group a.btn-primary {
+    border-color: orange;
+    background-color: orange;
+    margin-right: 16px;
+    border-radius: 100px;
+    border-top-left-radius: 0;
+}

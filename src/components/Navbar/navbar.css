@@ -1,0 +1,65 @@
+.site-header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    padding: 24px 32px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 2px 8px 0 rgb(0 0 0 / 7%);
+}
+
+.site-header ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav.main-navigation ul {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+nav.main-navigation ul li {
+    width: auto;
+}
+
+nav.main-navigation ul li:not(:last-child) {
+    margin-right: 24px;
+}
+
+nav.main-navigation {
+    margin-left: auto;
+}
+
+.menu-item a[class*=btn-] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 24px;
+    border: 1px solid transparent;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.menu-item a.btn-signin {
+    border-color: orange;
+    background-color: orange;
+}
+
+.menu-item a.btn-signup {
+    border-color: orange;
+    color: orange;
+}
+
+a.branding-link {
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: 2.3px;
+    color: orange;
+}

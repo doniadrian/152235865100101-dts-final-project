@@ -1,38 +1,159 @@
-.App {
-  text-align: center;
+/* LOGIN PAGE */
+.section-formlogin {
+    display: flex;
+    flex-flow: row wrap;
+    min-height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.section-formlogin > div {
+    flex: 1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.section-formlogin .formlogin {
+    align-self: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.box-formlogin {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 40px;
 }
 
-.App-link {
-  color: #61dafb;
+.side-formlogin img {
+    height: 100vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form.form-wrapper {
+    margin: 24px 0;
+}
+
+.btn-social-login {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px #e5e5e5;
+    border-radius: 8px;
+    padding: 16px 24px;
+    font-weight: bold;
+}
+
+.btn-social-login img {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    margin-right: 12px;
+}
+
+form.form-wrapper .form-field:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+form.form-wrapper .form-field.form-field-submit {
+    margin-top: 16px;
+}
+
+a.link-register {
+    display: block;
+    text-align: center;
+    margin-top: 16px;
+}
+
+a.link-home {
+    display: block;
+    text-align: center;
+    margin-top: 8px;
+}
+
+.form-field label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.info-form {
+    background-color: #fdbfbf;
+    display: block;
+    font-size: 14px;
+    margin: 8px 0;
+    padding: 6px 10px;
+}
+
+
+
+
+/* GENERAL */
+section.is-section {
+    margin: 80px 0;
+    padding: 0 32px;
+}
+
+section.section-search-result form.form-search {
+    width: 100%;
+    max-width: 580px;
+    margin: 32px auto;
+}
+
+section.section-search-result form.form-search input[type="search"] {
+    width: 100%;
+}
+
+section.section-search-result .title-search {
+    text-align: center;
+}
+
+
+
+/* VEGGIES */
+.veggie-grid {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 -10px -20px;
+}
+
+.veggie-grid .veggie-item {
+    width: 25%;
+    padding: 0 10px;
+    margin-bottom: 20px;
+}
+
+.veggie-wrapper {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 30px;
+    padding: 24px;
+    background-color: rgb(255 165 0 / 20%);
+    box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.veggie-wrapper .figure-veggie {
+    display: flex;
+    height: 220px;
+    overflow: hidden;
+    margin: -24px -24px 16px;
+    background-color: #fff;
+}
+
+.veggie-wrapper .figure-veggie img {
+    transform: scale(1.15);
+    transition: .3s;
+}
+
+.veggie-wrapper:hover .figure-veggie img {
+    transform: scale(1.20);
+}
+
+.content-veggie .entry-title {
+    font-size: 18px;
+    margin-bottom: 0;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    height: 48px;
 }
