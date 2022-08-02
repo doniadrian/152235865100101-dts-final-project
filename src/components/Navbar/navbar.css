@@ -67,9 +67,26 @@ a.branding-link {
     color: orange;
 }
 
+.menu-item.menu-item-challenge a.cta-challenge {
+    font-weight: bold;
+}
+
+.menu-item.menu-item-challenge {
+    align-self: center;
+}
+
+
 
 @media all and (max-width: 900px) {
     .site-header {
         padding: 0;
+    }
+}
+
+@media all and (max-width: 600px) {
+    nav.main-navigation ul li.menu-item.menu-item-challenge {
+        width: 100%;
+        text-align: center;
+        margin: 0 0 8px 0;
     }
 }

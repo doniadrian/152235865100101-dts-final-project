@@ -26,6 +26,11 @@ const Navbar = () => {
 
 			<nav className="main-navigation">
 				<ul className="menu">
+					<li className="menu-item menu-item-challenge">
+						<Link className="cta-challenge" to="/contact">
+							Challenge me!
+						</Link>
+					</li>
 					<li className="menu-item">
 						{user ? (
 							<button className="btn-signup">
