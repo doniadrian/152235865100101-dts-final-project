@@ -158,7 +158,6 @@ select {
 	-moz-appearance: none;
 	-ms-appearance: none;
 	appearance: none;
-	background: #1e1e1e url() calc(100% - 30px) center/8px no-repeat;
 }
 
 select::-ms-expand {

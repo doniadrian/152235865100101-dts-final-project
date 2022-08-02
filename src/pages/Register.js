@@ -34,9 +34,14 @@ const Register = () => {
 						<div className="box-formlogin">
 							<h1>Register</h1>
 							<p>Hello! Please register here.</p>
-							{
-								errorMessage && <span className="info-form error">{errorMessage}</span>
-							}
+							{errorMessage && (
+								<span className="info-form error">
+									{errorMessage
+										.replace(/-/g, " ")
+										.replace(/Firebase:/g, "")
+										.replace("auth/", "")}
+								</span>
+							)}
 							<form
 								className="form-wrapper"
 								onSubmit={handleSubmit}
@@ -67,7 +72,8 @@ const Register = () => {
 								</div>
 							</form>
 							<Link className="link-register" to="/login">
-								Already have an account? <strong>Sign in here</strong>
+								Already have an account?{" "}
+								<strong>Sign in here</strong>
 							</Link>
 							<Link className="link-home" to="/">
 								<strong>Go to homepage</strong>
@@ -75,7 +81,10 @@ const Register = () => {
 						</div>
 					</div>
 					<div className="side-formlogin">
-						<img src="/images/hero-banner-login.jpg" alt="hero banner login" />
+						<img
+							src="/images/hero-banner-login.jpg"
+							alt="hero banner login"
+						/>
 					</div>
 				</section>
 			</main>

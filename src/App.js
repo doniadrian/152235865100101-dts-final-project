@@ -7,6 +7,7 @@ import Searched from "./pages/Searched";
 import ProtectedRoute from "./config/ProtectedRoute";
 import NoMatch from "./pages/NoMatch";
 import RecipeDetail from "./pages/RecipeDetail";
+import Contact from "./pages/Contact";
 
 function App() {
 	return (
@@ -43,6 +44,7 @@ function App() {
 							path="/searched/:search"
 							element={<Searched />}
 						/>
+						<Route path="/contact" element={<Contact />} />
 						<Route path="*" element={<NoMatch />} />
 					</Routes>
 				</BrowserRouter>

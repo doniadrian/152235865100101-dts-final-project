@@ -20,7 +20,7 @@
 nav.main-navigation ul {
     display: flex;
     flex-flow: row wrap;
-    align-items: center;
+    align-items: flex-start;
 }
 
 nav.main-navigation ul li {
@@ -28,13 +28,14 @@ nav.main-navigation ul li {
 }
 
 nav.main-navigation ul li:not(:last-child) {
-    margin-right: 24px;
+    margin: 0 16px 16px 0;
 }
 
 nav.main-navigation {
     margin-left: auto;
 }
 
+.menu-item button[class*=btn-],
 .menu-item a[class*=btn-] {
     display: inline-flex;
     align-items: center;
@@ -47,11 +48,13 @@ nav.main-navigation {
     font-weight: bold;
 }
 
+.menu-item button.btn-signin,
 .menu-item a.btn-signin {
     border-color: orange;
     background-color: orange;
 }
 
+.menu-item button.btn-signup,
 .menu-item a.btn-signup {
     border-color: orange;
     color: orange;
@@ -62,4 +65,11 @@ a.branding-link {
     font-size: 24px;
     letter-spacing: 2.3px;
     color: orange;
+}
+
+
+@media all and (max-width: 900px) {
+    .site-header {
+        padding: 0;
+    }
 }

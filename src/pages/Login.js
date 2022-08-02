@@ -56,9 +56,14 @@ const Login = () => {
 						<div className="box-formlogin">
 							<h1>Welcome back</h1>
 							<p>Welcome back! Please enter your details.</p>
-							{
-								errorMessage && <span className="info-form error">{errorMessage}</span>
-							}
+							{errorMessage && (
+								<span className="info-form error">
+									{errorMessage
+										.replace(/-/g, " ")
+										.replace(/Firebase:/g, "")
+										.replace("auth/", "")}
+								</span>
+							)}
 							<form
 								className="form-wrapper"
 								onSubmit={handleSubmit}
@@ -97,7 +102,8 @@ const Login = () => {
 								Sign in with Google
 							</button>
 							<Link className="link-register" to="/register">
-								Don't have an account? <strong>Sign up for free</strong>
+								Don't have an account?{" "}
+								<strong>Sign up for free</strong>
 							</Link>
 							<Link className="link-home" to="/">
 								<strong>Go to homepage</strong>
@@ -105,7 +111,10 @@ const Login = () => {
 						</div>
 					</div>
 					<div className="side-formlogin">
-						<img src="/images/hero-banner-login.jpg" alt="hero banner login" />
+						<img
+							src="/images/hero-banner-login.jpg"
+							alt="hero banner login"
+						/>
 					</div>
 				</section>
 			</main>

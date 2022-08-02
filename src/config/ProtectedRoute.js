@@ -3,7 +3,7 @@ import { Navigate } from "react-router-dom";
 
 import { auth } from "../config/firebase";
 
-const ProtectedRoute = ({ children, loginOnly = true, }) => {
+const ProtectedRoute = ({ children, loginOnly = true }) => {
 	const [user] = useAuthState(auth);
 
 	if (!user && loginOnly) {

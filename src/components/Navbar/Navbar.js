@@ -1,5 +1,5 @@
 import "./navbar.css";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, Link, NavLink } from "react-router-dom";
 import { signOut } from "firebase/auth";
 import { auth } from "../../config/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
@@ -20,38 +20,26 @@ const Navbar = () => {
 
 	return (
 		<header id="site-header" className="site-header">
-			<Link className="branding-link" to="/">
+			<NavLink className="branding-link" to="/">
 				FOOD RECIPE
-			</Link>
+			</NavLink>
 
 			<nav className="main-navigation">
 				<ul className="menu">
 					<li className="menu-item">
-						<Link to="/">Home</Link>
-					</li>
-					<li className="menu-item">
-						<Link to="/">Italian</Link>
-					</li>
-					<li className="menu-item">
-						<Link to="/">American</Link>
-					</li>
-					<li className="menu-item">
-						<Link to="/">Thai</Link>
-					</li>
-					<li className="menu-item">
-						<Link to="/">Japanese</Link>
-					</li>
-					<li className="menu-item">
-						<Link className="btn-signup" to="/register">
-							Sign up
-						</Link>
+						{user ? (
+							<button className="btn-signup">
+								{user?.email}
+							</button>
+						) : (
+							<Link className="btn-signup" to="/register">
+								Sign up
+							</Link>
+						)}
 					</li>
 					<li className="menu-item">
 						{user ? (
-							<button
-								className="btn-signin"
-								onClick={onLogout}
-							>
+							<button className="btn-signin" onClick={onLogout}>
 								Sign out
 							</button>
 						) : (

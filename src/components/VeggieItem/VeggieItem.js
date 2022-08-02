@@ -10,6 +10,7 @@ const VeggieItem = ({ veggie }) => {
 							src={veggie.image}
 							alt={veggie.title}
 							className="thumbnail-veggie"
+							loading="lazy"
 						/>
 					</figure>
 
